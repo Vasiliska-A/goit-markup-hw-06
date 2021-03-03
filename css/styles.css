@@ -667,14 +667,15 @@ section {
 
 /* Підписка на розсилку */
 
-.form-field {
-  position: relative;
+.subscribe-box {
+  display: flex;
+  align-items: flex-end;
+}
 
+.form-field {
   display: flex;
   flex-direction: column;
   margin-left: 91px;
-
-  min-width: 570px;
 }
 
 .form-field > .text {
@@ -687,6 +688,10 @@ section {
   text-transform: uppercase;
 
   color: var(--white-text-background-color);
+}
+
+.form-label {
+  display: inline-block;
 }
 
 .input-subscribe {
@@ -712,12 +717,11 @@ section {
 .input-subscribe:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: 1px solid var(--interactive-color);
+  outline-color: var(--interactive-color);
 }
 
 .subscribe-btn {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  position: relative;
 
   padding: 10px 62px 10px 29px;
   border-radius: 4px;
