@@ -696,22 +696,24 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
 
+  font-family: inherit;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
 
-  color: var(--white-text-color-06);
+  color: var(--white-text-background-color);
   background-color: var(--footer-bg-color);
 
-  transition: transform 250ms var(--time-function);
+  transition: box-shadow 250ms var(--time-function),
+    border-color 250ms var(--time-function);
 }
 
 .input-subscribe:focus,
 .input-subscribe:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border: 1px solid var(--interactive-color);
+  border-color: var(--interactive-color);
   outline-color: var(--interactive-color);
 }
 
@@ -735,7 +737,7 @@ section {
   text-align: center;
   letter-spacing: 0.06em;
 
-  transition: transform 250ms var(--time-function);
+  transition: box-shadow 250ms var(--time-function);
 }
 
 .subscribe-icon {
@@ -747,6 +749,7 @@ section {
 .subscribe-btn:hover,
 .subscribe-btn:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  outline-color: var(--interactive-color);
 }
 
 /* Стилі портфоліо */
