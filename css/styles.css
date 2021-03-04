@@ -29,12 +29,6 @@ img {
   height: auto;
 }
 
-/* svg {
-  display: block;
-  max-width: 100%;
-  height: auto;
-} */
-
 section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -165,7 +159,7 @@ section {
 .link.link.current::after {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
 
   content: '';
   display: inline-block;
@@ -372,6 +366,7 @@ section {
 }
 
 .examples-item {
+  flex-basis: calc((100% - 60px) / 3);
   position: relative;
 }
 
