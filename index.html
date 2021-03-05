@@ -445,15 +445,17 @@
           </div>
           <div class="subscribe-box">
             <form class="form-field">
-              <b class="text">Подпишитесь на рассылку</b>
-              <label class="form-label">
-                <input
-                  type="text"
-                  name="subscribe"
-                  placeholder="E-mail"
-                  class="input-subscribe"
-                />
-              </label>
+              <div class="label-box">
+                <b class="text">Подпишитесь на рассылку</b>
+                <label class="form-label">
+                  <input
+                    type="text"
+                    name="subscribe"
+                    placeholder="E-mail"
+                    class="input-subscribe"
+                  />
+                </label>
+              </div>
               <button type="submit" class="subscribe-btn">
                 Подписаться
                 <svg width="24" height="24" class="subscribe-icon">
@@ -511,7 +513,6 @@
               ></textarea>
             </span>
           </label>
-
           <label class="checkbox-label">
             <input type="checkbox" name="agreement" class="checkbox" />
             <svg width="16" height="15" class="check-icon">
@@ -520,13 +521,12 @@
                 class="vector"
               ></use>
             </svg>
-
             <span class="agreement-text"
               >Соглашаюсь с рассылкой и принимаю
               <a href="#" target="blank">Условия договора</a>
             </span>
           </label>
-          <button type="submit" class="form-btn">Отправить</button>
+          <button type="submit" class="form-button">Отправить</button>
         </form>
       </div>
     </div>

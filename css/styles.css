@@ -662,16 +662,16 @@ section {
 
 /* Підписка на розсилку */
 
-.subscribe-box {
+/* .subscribe-box {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-end; */
 }
 
-.form-field {
+/* .form-field {
   display: flex;
   flex-direction: column;
   margin-left: 91px;
-}
+} */
 
 .form-field > .text {
   margin-bottom: 20px;
@@ -1006,6 +1006,7 @@ section {
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
+  transition: fill 250ms var(--time-function);
 }
 
 .input-field {
@@ -1013,8 +1014,8 @@ section {
   min-height: 40px;
   padding: 0;
   padding-left: 35px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  border: 1px solid rgba(136, 62, 62, 0.2);
 
   font-family: inherit;
   font-style: normal;
@@ -1023,7 +1024,24 @@ section {
   line-height: 1.167;
   letter-spacing: 0.01em;
 
-  color: var(--headers-color);
+  transition: border-color 250ms var(--time-function);
+}
+
+.input-label:hover .input-field {
+  border-color: var(--interactive-color);
+}
+
+.input-field:focus {
+  border-color: var(--interactive-color);
+  outline: none;
+}
+
+.input-label:hover .input-icon {
+  fill: var(--interactive-color);
+}
+
+.input-field:focus + .input-icon {
+  fill: var(--interactive-color);
 }
 
 .checkbox {
@@ -1035,6 +1053,7 @@ section {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  cursor: pointer;
 }
 
 .agreement-text {
@@ -1057,22 +1076,25 @@ section {
 }
 
 .check-icon {
-  display: inline-block;
-
-  width: 16px;
-  height: 15px;
   border: 2px solid var(--headers-color);
   border-radius: 4px;
 }
 
+.check-icon > .vector {
+  display: none;
+}
+
 .checkbox:checked + .check-icon {
-  background-color: var(--interactive-color);
   border: none;
+}
+
+.checkbox:checked + .check-icon > .vector {
+  display: block;
 }
 
 /*   */
 
-.modal-form > .form-btn {
+.form-button {
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
@@ -1090,6 +1112,12 @@ section {
   font-size: 16px;
   line-height: 1.875;
   text-align: center;
+  letter-spacing: 0.06em;
 
   transition: color 250ms var(--time-function);
+}
+
+.modal-form > .form-button:hover,
+.modal-form > .form-button:focus {
+  background-color: #188ce8;
 }
