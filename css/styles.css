@@ -606,11 +606,8 @@ section {
 
 .footer-box {
   display: flex;
+  justify-content: space-between;
   align-items: baseline;
-}
-
-.address-box {
-  margin-right: 70px;
 }
 
 .social-list {
@@ -662,18 +659,22 @@ section {
 
 /* Підписка на розсилку */
 
-/* .subscribe-box {
+.subscribe-box {
   display: flex;
-  align-items: flex-end; */
+  align-items: flex-end;
 }
 
-/* .form-field {
+.form-field {
+  display: flex;
+  align-items: flex-end;
+}
+
+.label-box {
   display: flex;
   flex-direction: column;
-  margin-left: 91px;
-} */
+}
 
-.form-field > .text {
+.label-box > .text {
   margin-bottom: 20px;
   font-style: normal;
   font-weight: 700;
